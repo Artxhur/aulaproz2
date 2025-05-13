@@ -12,10 +12,15 @@ Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
 escreva("Digite um número para o cálculo da tabuada de 1 até 10:")
 leia (numero)
- se (numero < 1) ou ( numero > 10) entao
- escreva ("Número fora do limite!!!")
- senao
+ se (numero > 10) ou (numero <= 0) entao
+  escreva ("Número fora do limite!!!")
+   fimse
+
  para y de 1 ate 10 faca
- escreval (y, "X", numero, "=", numero * y)
-    fimpara
+
+  se (numero < 10) ou (numero > 0) entao
+  escreval (y, "X", numero, "=", numero * y)
+ 
+
+
 Fimalgoritmo
