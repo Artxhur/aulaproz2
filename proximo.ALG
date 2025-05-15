@@ -10,7 +10,7 @@ palpite1, palpite2, dado, dif1, dif2:inteiro
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
 escreval("Funcionamento do jogo:")
-escreval ("Dois jogadores farão palpites de números entre 0 e 20")
+escreval ("Dois jogadores farão palpites de números entre 0 e 100")
 escreval ("Quem acertar o número aleatório ganha")
 
   escreval ("Palpite do jogador 1:")
@@ -30,9 +30,9 @@ aleatorio off
  fimse
    se (dif1 > dif2) entao
    escreval ("jogador 2 acertou a ganhou o jogo")
-
- senao
-   escreval ("Empate!!! Ninguém venceu
+  fimse
+  se (dif1 = dif2) entao
+   escreval ("Empate!!! Ninguém venceu")
  fimse
 
 
