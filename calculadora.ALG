@@ -1,25 +1,54 @@
-Algoritmo "pontofinal"
-//  
-//  
+Algoritmo "semnome"
 // 
 //  
-// DescriÃ§Ã£o   : Aqui vocÃª descreve o que o programa faz! (funÃ§Ã£o)
+// Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 29/04/2025
+// Data atual  : 13/05/2025
 Var
-// SeÃ§Ã£o de DeclaraÃ§Ãµes das variÃ¡veis 
-a: inteiro
-b: inteiro
+// Seção de Declarações das variáveis 
+valor1, valor2:real
+opcao:inteiro
 
 Inicio
-// SeÃ§Ã£o de Comandos, procedimento, funÃ§Ãµes, operadores, etc... 
-a<-5
-b<-2
-escreval (a+b)
-escreval (a-b)
-escreval (a*b)
-escreval (a/b)
-escreval (a\b)
-escreval (a^b)
-escreval (a%b)
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+ escreval("CALCULADORA")
+ escreval("------------------------------------")
+ escreval ("Digite seus números:")
+ leia (valor1, valor2)
+ escreval ("escolha uma opção:")
+ escreval ("1- SOMA")
+ escreval ("2-SUBTRAÇÃO")
+ escreval ("3-MULTIPLICAÇÃO")
+ escreval ("4-DIVISÃO")
+ 
+leia (opcao)
+
+escolha (opcao)
+
+ caso 1
+ escreval ("O resultado da soma é:", valor1 + valor2)
+ 
+
+ 
+ caso 2
+ escreval ("O resultado da subtração é:", valor1 - valor2)
+
+
+
+ caso 3
+ escreval ("O resultado da multiplicação é:", valor1 * valor2)
+
+
+
+ caso 4
+ escreval ("O resultado da divisão é:", valor1 / valor2)
+
+
+
+ outrocaso
+ escreval ("Opção inválida!!!")
+ 
+ fimescolha
+
+
 Fimalgoritmo
