@@ -10,7 +10,7 @@ inicio
    // Entrada de dados
    para i de 1 ate 5 faca
       limpatela
-      escreva("Digite os dados do ", i, "º aluno:")
+      escreva("Digite os dados do ", i, "Âº aluno:")
       escreval("")
       escreva("Nome do aluno: ")
       leia(nomes[i])
@@ -21,11 +21,11 @@ inicio
       medias[i] <- (av1[i] + av2[i]) / 2
    fimpara
 
-   // Exibição dos resultados (alinhados)
+   // ExibiÃ§Ã£o dos resultados (alinhados)
    limpatela
    escreval("RESULTADOS DOS ALUNOS")
    escreval("----------------------------------------")
-   escreval("NOME               AV1   AV2  MÉDIA")
+   escreval("NOME               AV1   AV2  MÃ‰DIA")
    escreval("----------------------------------------")
 
    para i de 1 ate 5 faca
