@@ -1,1 +1,1 @@
-sudo less /mnt/linux/var/log/syslog
+mount | grep cryptroot
