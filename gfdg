@@ -1,1 +1,2 @@
-sudo cryptsetup luksOpen /dev/sda6 cryptroot
+sudo mkdir /mnt/linux
+sudo mount /dev/mapper/cryptroot /mnt/linux
