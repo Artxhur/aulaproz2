@@ -1,1 +1,1 @@
-[ -d /sys/firmware/efi ] && echo "UEFI" || echo "Legacy"
+sudo dnf install grub2-efi grub2-efi-modules shim efibootmgr
