@@ -1,3 +1,1 @@
-sudo mount --bind /dev /mnt/linux/dev
-sudo mount --bind /proc /mnt/linux/proc
-sudo mount --bind /sys /mnt/linux/sys
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
