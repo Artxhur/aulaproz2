@@ -1,1 +1,2 @@
-mount | grep cryptroot
+/dev/mapper/cryptroot on /mnt/linux type btrfs (rw,relatime,seclabel,ssd,discard=async,space_cache=v2,subvolid=5,subvol=/)
+/dev/mapper/cryptroot on /mnt/linux type btrfs (rw,relatime,seclabel,ssd,discard=async,space_cache=v2,subvolid=5,subvol=/)
