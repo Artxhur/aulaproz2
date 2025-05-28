@@ -1,0 +1,1 @@
+sudo cryptsetup luksOpen /dev/sda6 cryptroot
