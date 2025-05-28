@@ -1,1 +1,3 @@
-sudo btrfs subvolume list /mnt/linux
+sudo mount --bind /dev /mnt/linux/dev
+sudo mount --bind /proc /mnt/linux/proc
+sudo mount --bind /sys /mnt/linux/sys
