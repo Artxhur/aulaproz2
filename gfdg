@@ -1,1 +1,1 @@
-sudo mount /dev/mapper/cryptroot /mnt/linux
+sudo less /mnt/linux/var/log/syslog
