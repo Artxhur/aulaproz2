@@ -1,0 +1,33 @@
+[
+  {
+    "id": "b1",
+    "title": "O Pequeno Príncipe",
+    "author": "Antoine de Saint-Exupéry",
+    "price": 29.90,
+    "category": "Infantil",
+    "image": "https://images.dlivros.org/Antoine-de-Saint-Exupery/pequeno-principe-antoine-saint-exupery_large.webp",
+    "description": "Um clássico que encanta crianças e adultos. Uma fábula sobre amizade e sentido da vida.",
+    "file": "books/pequeno-principe.pdf"
+  },
+  {
+    "id": "b2",
+    "title": "Dom Casmurro",
+    "author": "Machado de Assis",
+    "price": 39.50,
+    "category": "Clássicos",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmHKhRISm52FQise8aYmS9N-odnxV1ro0d1g&s",
+    "description": "Romance brasileiro que explora ciúmes e memória.",
+    "file": "books/dom-casmurro.pdf"
+  }
+,  {
+    "id": "b3",
+    "title": "A Metamorfose",
+    "author": "Franz Kafka",
+    "price": 29.90,
+    "category": "Clássicos",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwutH7XhRctRVZGhlNRoX2495uBvaaJeYUKQ&s",
+    "description": "A clássica obra de Franz Kafka sobre Gregor Samsa, que acorda transformado em um inseto gigante.",
+    "file": "books/a-metamorfose.pdf"
+}
+
+]

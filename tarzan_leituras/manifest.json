@@ -1,0 +1,14 @@
+{
+  "name": "Tarzan Leituras",
+  "short_name": "Tarzan",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1b5e20",
+  "icons": [
+    { "src": "icons/icon-72.png", "sizes": "72x72", "type": "image/png" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "description": "Tarzan Leituras — livraria online. Compre e leia os melhores títulos."
+}
