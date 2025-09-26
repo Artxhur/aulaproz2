@@ -1,4 +1,4 @@
-const CACHE = "tarzan-v1";
+const CACHE = "tarzan-v2";
 const ASSETS = [
   "/",
   "/index.html",
@@ -10,9 +10,16 @@ const ASSETS = [
   "/icons/icon-192.png",
   "/icons/icon-512.png",
   "/books/pequeno-principe.pdf",
-  "/books/dom-casmurro.pdf"
+  "/books/dom-casmurro.pdf",
+  "/books/a-metamorfose.pdf",
+  "/books/harry-potter-1.pdf",
+  "/books/senhor-dos-aneis-1.pdf",
+  "/books/1984.pdf",
+  "/books/o-hobbit.pdf",
+  "/books/alice-no-pais-das-maravilhas.pdf",
+  "/books/o-codigo-da-vinci.pdf",
+  "/books/o-alquimista.pdf"
 ];
-
 
 self.addEventListener("install", evt => {
   evt.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));

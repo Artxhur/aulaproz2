@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#1b5e20"/>
+  <title>Tarzan Leituras</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Tarzan Leituras</div>
+
+    <nav class="nav">
+      <button data-route="#home" class="nav-btn">Home</button>
+      <button data-route="#loja" class="nav-btn">Loja</button>
+      <button data-route="#carrinho" class="nav-btn">Carrinho <span id="cartCount" class="badge">0</span></button>
+      <button data-route="#compras" class="nav-btn">Compras</button>
+      <button id="btnAccount" class="nav-btn">Conta</button>
+    </nav>
+
+    <div class="mobile-menu">
+      <button id="mobileMenuBtn">☰</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Home -->
+    <section id="home" class="page">
+      <div class="hero">
+        <div>
+          <h1>Bem-vindo à Tarzan Leituras</h1>
+          <p>Uma livraria moderna com muitos títulos para você devorar 📚</p>
+          <div class="hero-actions">
+            <button data-route="#loja" class="btn primary">Ver livros</button>
+            <button data-route="#compras" class="btn">Minhas compras</button>
+          </div>
+        </div>
+        <img src="https://th.bing.com/th/id/R.376ea76b31f265ebba70eb4cdee87bd7?rik=szJcNA0wDANK%2fg&pid=ImgRaw&r=0" alt="Tarzan Leituras" style="width: 370px; height: 100;">
+
+      </div>
+
+      <div class="search-row">
+        <input id="globalSearch" placeholder="Pesquisar por título ou autor..." />
+        <button id="searchBtn" class="btn">Buscar</button>
+      </div>
+
+      <h2>Destaques</h2>
+      <div id="featured" class="grid"></div>
+    </section>
+
+    <!-- Loja -->
+    <section id="loja" class="page" style="display:none;">
+      <div class="filters-row">
+        <select id="categoryFilter">
+          <option value="all">Todas as categorias</option>
+        </select>
+        <input id="lojaSearch" placeholder="Pesquisar na loja..." />
+      </div>
+      <div id="products" class="grid"></div>
+      <div id="noResults" class="notice" style="display:none;">Nenhum livro encontrado na loja.</div>
+    </section>
+
+    <!-- Carrinho -->
+    <section id="carrinho" class="page" style="display:none;">
+      <h2>Seu Carrinho</h2>
+      <div id="cartItems"></div>
+      <div class="cart-footer">
+        <div id="cartTotal">Total: R$ 0,00</div>
+        <div>
+          <button id="checkoutBtn" class="btn primary">Finalizar compra</button>
+          <button id="clearCartBtn" class="btn">Limpar carrinho</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compras -->
+    <section id="compras" class="page" style="display:none;">
+      <h2>Livros Comprados</h2>
+      <div id="purchasesList"></div>
+    </section>
+  </main>
+
+  <!-- Modais -->
+  <div id="productModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <button class="close" id="closeProductModal">✕</button>
+      <div id="productDetail"></div>
+    </div>
+  </div>
+
+  <div id="authModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <button class="close" id="closeAuthModal">✕</button>
+      <div id="authArea"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" style="display:none;"></div>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js").then(()=>console.log("SW ok")).catch(()=>console.log("SW falhou"));
+    }
+  </script>
+</body>
+</html>

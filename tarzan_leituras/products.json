@@ -18,8 +18,8 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmHKhRISm52FQise8aYmS9N-odnxV1ro0d1g&s",
     "description": "Romance brasileiro que explora ciúmes e memória.",
     "file": "books/dom-casmurro.pdf"
-  }
-,  {
+  },
+  {
     "id": "b3",
     "title": "A Metamorfose",
     "author": "Franz Kafka",
@@ -28,6 +28,25 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwutH7XhRctRVZGhlNRoX2495uBvaaJeYUKQ&s",
     "description": "A clássica obra de Franz Kafka sobre Gregor Samsa, que acorda transformado em um inseto gigante.",
     "file": "books/a-metamorfose.pdf"
-}
-
+  },
+  {
+    "id": "b4",
+    "title": "Harry Potter e a Pedra Filosofal",
+    "author": "J.K. Rowling",
+    "price": 45.00,
+    "category": "Infantil",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81YOuOGFCJL.jpg",
+    "description": "O início da saga de Harry Potter, cheio de magia e aventuras.",
+    "file": "books/harry-potter-1.pdf"
+  },
+  {
+    "id": "b5",
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 34.90,
+    "category": "Clássicos",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71kxa1-0mfL.jpg",
+    "description": "Distopia clássica que questiona a vigilância e totalitarismo.",
+    "file": "books/1984.pdf"
+  }
 ]
