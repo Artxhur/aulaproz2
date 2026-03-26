@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nome": "Flores pra Nic",
+    "slug": "flores-pra-nic",
+    "imagem": "assets/images/imagem1.png",
+    "descricao": "Melhor buque de flor para presentear a Nicolly Santos, ou talvez pedi-la em algo a mais futuramente.",
+    "preco": 99.00,
+    "keywords": ["buque", "melhores flores", "pedido de namoro"]
+  },
+  {
+    "id": 2,
+    "nome": "Caixa de bombom da Nic",
+    "slug": "bom-bom-nic",
+    "imagem": "assets/images/imagem2.png",
+    "descricao": "A melhor caixa de bobom para acompanhar as flores no pedido a Nicolly Santos. Conhecida tambem como Nic ou gemeas.",
+    "preco": 70.00,
+    "keywords": ["Bombom", "Caixa de chocolate para pedido de namoro", "melhores chocolates hoje"]
+  },
+  {
+    "id": 3,
+    "nome": "Caixa do Pedido pra Nic",
+    "slug": "bom-bom-nic",
+    "imagem": "assets/images/imagem3.png",
+    "descricao": "A melhor caixa dessa vez para um pedido oficial, melhor ainda se acompanhar as flores no pedido a Nicolly Santos. Conhecida tambem como Nic ou gemeas.",
+    "preco": 70.00,
+    "keywords": ["Bombom", "Caixa de chocolate para pedido de namoro", "melhores chocolates hoje"]
+  }
+]
