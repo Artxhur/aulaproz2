@@ -18,7 +18,7 @@ function mostrarProdutos(lista) {
     listaProdutos.innerHTML = "";
     if (lista.length === 0) {
         listaProdutos.innerHTML = `
-        <div>
+        <div class="col-12 text-center mt-5">
             <h3>Nenhum produto encontrado</h3>
             <p>Tente buscar por outro termo.</p>
         </div>
@@ -27,18 +27,20 @@ function mostrarProdutos(lista) {
     }
     lista.forEach(produto => {
         const card = document.createElement("div");
-        card.classList.add("col-4");
+        card.classList.add("col-md-4", "mb-4");
         card.innerHTML = `
-        <div class="card h-100 mt-3">
-            <div class="card-body">
-                <img src="${produto.imagem}" alt="Imagem produto ${produto.nome}" class="img-fluid w-90%">
-                <h3 class="card-tittle">${produto.nome}</h3>
-                <p class="card-text"> ${(produto.descricao).substring(0,25) + "..."}</p>
-                <p class="card-text">R$ ${produto.preco.toFixed(2)}</p>
-                <button class=" btn btn-detalhes" tabindex="0">Ver Detalhes</button>
-                <button class="btn btn-danger" tabindex="0">Comprar</button>
+        <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+                <img src="${produto.imagem}" alt="Imagem produto ${produto.nome}" class="img-fluid mb-3" style="max-height: 200px; object-fit: contain;">
+                <h3 class="card-title h5">${produto.nome}</h3>
+                <p class="card-text flex-grow-1">${(produto.descricao).substring(0, 50) + "..."}</p>
+                <p class="fs-4 fw-bold">R$ ${produto.preco.toFixed(2)}</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-secondary btn-detalhes" tabindex="0">Ver Detalhes</button>
+                    <button class="btn btn-danger" tabindex="0">Comprar</button>
                 </div>
             </div>
+        </div>
         `;
         const botaoDetalhes = card.querySelector(".btn-detalhes");
         botaoDetalhes.addEventListener("click", () => {
@@ -47,21 +49,25 @@ function mostrarProdutos(lista) {
         listaProdutos.appendChild(card);
     });
 }
-    function trocaTema() {
-        const body = document.body;
-        const temaAtual = body.getAttribute("data-bs-theme");
-        if (temaAtual === "dark") {
-            body.setAttribute("data-bs-theme", "light");
-        } else {
-            body.setAttribute("data-bs-theme", "dark");
-        }
+
+function trocaTema() {
+    const body = document.body;
+    const temaAtual = body.getAttribute("data-bs-theme");
+    if (temaAtual === "dark") {
+        body.setAttribute("data-bs-theme", "light");
+    } else {
+        body.setAttribute("data-bs-theme", "dark");
     }
+}
+
 function aumentarTexto() {
     document.body.style.fontSize = "20px";
 }
+
 function diminuirTexto() {
     document.body.style.fontSize = "14px";
 }
+
 let lendo = false;
 function lerPagina() {
     if (lendo) {
@@ -78,43 +84,49 @@ function lerPagina() {
         lendo = true;
     }
 }
+
 function pesquisarProdutos() {
-    const texto = campoPesquisa.ariaValueMax.toLowerCase().trim();
-    const produtosFiltrados = podrutos.filter(produto =>
+    const texto = campoPesquisa.value.toLowerCase().trim();
+    const produtosFiltrados = produtos.filter(produto =>
         produto.nome.toLowerCase().includes(texto) || 
         produto.descricao.toLowerCase().includes(texto)
     );
-    mostrarProdutos(produtosFiltrados)
+    mostrarProdutos(produtosFiltrados);
 }
+
 formPesquisa.addEventListener("submit", function(event) {
     event.preventDefault();
     pesquisarProdutos();
 });
-lerPG.addEventListener("click",lerPagina);
-lerPG.addEventListener("keydown", function(event){
-    if(event.key ==="Entrer"){
+
+lerPG.addEventListener("click", lerPagina);
+lerPG.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
         lerPagina();
     }
 });
-aumenta.addEventListener("click",aumentarTexto);
-aumenta.addEventListener("keydown", function(event){
-    if(event.key ==="Entrer"){
+
+aumenta.addEventListener("click", aumentarTexto);
+aumenta.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
         aumentarTexto();
     }
 });
-diminui.addEventListener("click",diminuirTexto);
-diminui.addEventListener("keydown", function(event){
-    if(event.key ==="Entrer"){
+
+diminui.addEventListener("click", diminuirTexto);
+diminui.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
         diminuirTexto();
     }
 });
-tema.addEventListener("click",trocaTema);
-tema.addEventListener("keydown", function(event){
-    if(event.key ==="Entrer"){
-        trocarTema();
-        7
+
+tema.addEventListener("click", trocaTema);
+tema.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        trocaTema();
     }
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     buscarProdutos();
 });
